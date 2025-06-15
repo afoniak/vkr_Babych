@@ -13,8 +13,8 @@ function sendOrderEmail($email, $order_id, $items, $total) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'catpeach3454@gmail.com';
-        $mail->Password   = 'oiqu tgxe iqut zthr';
+        $mail->Username   = '$$$';
+        $mail->Password   = '$$$';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet    = 'UTF-8';
