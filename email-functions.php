@@ -16,7 +16,7 @@ function sendOrderEmail($email, $order_id, $items, $total) {
         $mail->Username   = '$$$';
         $mail->Password   = '$$$';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Port       = $$$;
         $mail->CharSet    = 'UTF-8';
 
         // налаштування листа
@@ -93,7 +93,7 @@ function buildEmailMessage($order_id, $items, $total) {
         
         <div class="footer">
             <p>3 повагою, команда GUSTAVO<br>
-            Email: catpeach3454@gmail.com</p>
+            Email: $$$$</p>
         </div>
     </body>
     </html>';
