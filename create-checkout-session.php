@@ -57,7 +57,7 @@ try {
                 'product_data' => [
                     'name' => $row['product_name'] . ' (Розмір: ' . $row['size'] . ')',
                 ],
-                'unit_amount' => intval($row['price'] * 100), // stripe використовує копійки
+                'unit_amount' => intval($row['price'] * 100), 
             ],
             'quantity' => $row['quantity'],
         ];
