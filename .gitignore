@@ -1,0 +1,8 @@
+images/
+scr/
+vendor/composer/
+vendor/phpmailer/
+vendor/stripe/
+connect-db.php
+composer.*
+autoload.php 

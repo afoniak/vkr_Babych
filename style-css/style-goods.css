@@ -1,0 +1,1306 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff; 
+    color: black; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    margin-top: 55px;
+    padding: 12px 0;
+}
+
+.breadcrumbs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #212529;
+}
+
+.breadcrumbs span {
+    color: #6c757d;
+    margin: 0 8px;
+}
+
+.breadcrumbs span:last-child {
+    color: #343a40;
+    font-weight: 500;
+}
+
+/* Product material */
+.product-material {
+    background: #f8f9fa;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 3px solid #e9ecef;
+    font-size: 14px;
+}
+
+.product-material strong {
+    color: #495057;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    height: 55px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+
+/* Ліва частина - кошик */
+.header-left {
+    display: flex;
+    align-items: center;
+    min-width: 80px;
+}
+
+.cart-button {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+/* Центральна частина - логотип та меню */
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Меню категорій */
+.category-menu {
+    position: relative;
+}
+
+.category-link {
+    text-decoration: none;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.women-category:hover {
+    color: #e91e63;
+    background-color: rgba(233, 30, 99, 0.08);
+}
+
+.men-category:hover {
+    color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.08);
+}
+
+/* Випадаючі меню */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    min-width: 180px;
+    z-index: 1001;
+    margin-top: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.category-menu:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-section {
+    padding: 12px;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.dropdown-section:last-child {
+    border-bottom: none;
+}
+
+.dropdown-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.dropdown-item {
+    display: block;
+    color: #495057;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.women-menu .dropdown-item:hover {
+    color: #e91e63;
+    padding-left: 8px;
+}
+
+.men-menu .dropdown-item:hover {
+    color: #2196f3;
+    padding-left: 8px;
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.logo-container:hover img {
+    transform: scale(1.02);
+}
+
+/* Права частина - акаунт */
+.header-right {
+    display: flex;
+    align-items: center;
+    min-width: 80px;
+    justify-content: flex-end;
+}
+
+.account-button {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-button:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+/* Старі стилі заголовка - видаляємо для сумісності */
+.header-content h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.header-content h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header-content h2 a:hover {
+    text-decoration: underline;
+}
+
+.logo-container a.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 575px;
+}
+
+.button-container a {
+    display: inline-block;
+    padding: 0px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-header-logout {
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: #ff4f4f;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.button-header-logout:hover {
+    background-color: #b73d3d;
+    cursor: pointer;
+}
+
+.login-logout {
+    display: flex;
+    align-items: center;
+}
+
+.login-logout h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.login-logout h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.login-logout h2 a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер товару */
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 90px auto 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    min-height: 580px;
+    border: 1px solid #f1f3f4;
+}
+
+/* Секція з зображенням */
+.product-image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    padding: 24px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Секція з інформацією про товар */
+.product-info-section {
+    flex: 1;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Заголовок товару та зірка */
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.product-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+    flex-grow: 1;
+    line-height: 1.3;
+}
+
+.favorite-star {
+    font-size: 22px;
+    color: #dee2e6;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-left: 16px;
+}
+
+.favorite-star:hover {
+    color: #ffc107;
+}
+
+/* Опис товару */
+.product-description {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+/* Вибір розміру */
+.size-selection {
+    margin-bottom: 28px;
+}
+
+.size-selection h3 {
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+}
+
+.size-option {
+    position: relative;
+}
+
+.size-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.size-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    color: #495057;
+}
+
+.size-option input[type="radio"]:checked + .size-label {
+    background-color: #495057;
+    color: #fff;
+    border-color: #495057;
+}
+
+.size-label:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* Ціна */
+.price-section {
+    margin-bottom: 24px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Кнопка покупки */
+.buy-button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buy-button:hover {
+    background-color: #138496;
+    transform: translateY(-1px);
+}
+
+.buy-button i {
+    font-size: 16px;
+}
+
+/* Інформаційний контейнер - стилі для сумісності */
+.info-container {
+    text-align: left;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 90px auto 20px; 
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 4px solid #ccc; 
+}
+
+.text-info {
+    flex-grow: 1;
+}
+
+.buttons {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.button-account-password {
+    width: 400px; 
+    height: 25px;
+    background-color: #2196F3; 
+    color: #FFF; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block; 
+    margin: 0 auto;
+}
+
+.button-cancel {
+    width: 400px; 
+    height: 25px;
+    background-color: #ff2347; 
+    color: #FFF; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block; 
+    margin: 0 auto;
+}
+
+.button-cancel-photo {
+    width: 100px; 
+    height: 25px;
+    background-color: #ff2347; 
+    color: #FFF; 
+    border: none;
+    border-radius: 10px; 
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.button-photo-account {
+    width: 100px; 
+    height: 25px;
+    background-color: #feaa48; 
+    color: #FFF; 
+    border: none;
+    border-radius: 10px; 
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 100px;  
+}
+
+.button-account-resume {
+    width: 400px; 
+    height: 25px;
+    background-color: #9cebca; 
+    color: #FFF; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    display: block; 
+    margin: 0 auto;
+    margin-top: 10px;  
+}
+
+.button-account-password:hover{
+    background-color: #008eff; 
+    cursor: pointer;
+}
+
+.button-photo-account:hover{
+    background-color: #ffa030; 
+    cursor: pointer;
+}
+
+.button-account-resume:hover {
+    background-color: #54e8ab; 
+    cursor: pointer;
+}
+
+.button-resume-photo{
+    width: 400px; 
+    height: 25px;
+    background-color: #9d83e1; 
+    color: #FFF; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    display: block; 
+    margin: 0 auto;
+    margin-top: 10px; 
+}
+
+.button-resume-photo:hover {
+    background-color: #8558f5; 
+    cursor: pointer;
+}
+
+.button-resume-download{
+    width: 400px; 
+    height: 25px;
+    background-color: #8399e1; 
+    color: #FFF; 
+    border: none;
+    border-radius: 20px;
+    margin:20px auto 10px; 
+    display: block; 
+}
+
+.button-resume-download:hover {
+    background-color: #8399e1; 
+    cursor: pointer;
+}
+
+.update-container {
+    text-align: left;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 20px auto 20px; 
+}
+
+.update-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-container label {
+    margin-top: 10px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+}
+
+.update-container input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.file-upload-label {
+    background-color: #4723ff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.file-upload-input {
+    display: none;
+    background-color: #3a21b9; 
+    cursor: pointer; 
+}
+
+.update-container button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s; 
+}
+
+.update-container button:hover {
+    background-color: #40d744; 
+    cursor: pointer; 
+}
+
+.rezume-container {
+    text-align: left;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 20px auto 400px; 
+}
+
+.title-card{
+    font-size: 20px;
+}
+
+.rejected {
+    text-align: center;
+    background-color: #db8787;
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 20px auto 20px; 
+}
+
+.waiting {
+    text-align: center;
+    background-color: #e1b767;
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 20px auto 20px; 
+}
+
+.tested {
+    text-align: center;
+    background-color: #b9dfca;
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 20px auto 20px; 
+}
+
+/* Футер */
+footer {
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 40px 0 0;
+    margin-top: 60px;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    color: #343a40;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+/* Логотип у футері */
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    max-height: 50px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: #6c757d;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Контакти */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #343a40;
+}
+
+.contact-item i {
+    width: 16px;
+    margin-right: 10px;
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+/* Соціальні мережі */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #fff;
+    border: 1px solid #e9ecef;
+}
+
+.social-link:hover {
+    color: #343a40;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+/* Години роботи */
+.working-hours {
+    color: #6c757d;
+}
+
+.working-hours p {
+    margin: 6px 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.working-hours i {
+    margin-right: 8px;
+    color: #adb5bd;
+    width: 14px;
+}
+
+/* Нижня частина футера */
+.footer-bottom {
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* Старі стилі футера - видаляємо */
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.footer-content-1 {
+    width: 250px;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin: 15px;
+    color:black;
+}
+
+.footer-content-1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin: 15px;
+    color:black;
+}
+
+.contact-info p {
+    margin: 15px;
+    color:black;
+}
+
+.contact-email{
+    text-decoration: none;
+    color: skyblue;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.fa-facebook a,
+.fa-twitter a,
+.fa-instagram a,
+.fa-youtube a,
+.fa-telegram a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    color: white;
+}
+
+.fa-facebook a:hover {
+    background-color: darkblue;
+    color: #f2f2f2;
+}
+
+.fa-twitter a:hover {
+    background-color: #1a91da;
+    color: #f2f2f2;
+}
+
+.fa-instagram a:hover {
+    background-color: #d43e5d;
+    color: #f2f2f2;
+}
+
+.fa-youtube a:hover {
+    background-color: red;
+    color: #f2f2f2;
+}
+
+.fa-telegram a:hover {
+    background-color: lightblue;
+    color: #f2f2f2;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 70px;
+    }
+    
+    .header-content {
+        padding: 8px 15px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 70px;
+    }
+    
+    .header-center {
+        position: static;
+        transform: none;
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin: 8px 0;
+        gap: 24px;
+    }
+    
+    .header-left {
+        order: 2;
+    }
+    
+    .header-right {
+        order: 3;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        left: 10px;
+        right: 10px;
+        transform: none;
+        margin-top: 4px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        margin: 80px 15px 40px;
+        border-radius: 8px;
+    }
+    
+    .product-image-section {
+        min-height: 280px;
+        padding: 20px;
+    }
+    
+    .product-info-section {
+        padding: 24px 20px;
+    }
+    
+    .product-title {
+        font-size: 22px;
+    }
+    
+    .size-options {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .size-label {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* Футер адаптивність */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px 30px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .working-hours {
+        font-size: 14px;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 6px 10px;
+        min-height: 60px;
+    }
+    
+    .header-center {
+        gap: 16px;
+        margin: 6px 0;
+    }
+    
+    .cart-button,
+    .account-button {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -4px;
+        right: -4px;
+    }
+    
+    .product-container {
+        margin: 70px 10px 30px;
+        border-radius: 6px;
+    }
+    
+    .product-image-section {
+        min-height: 240px;
+        padding: 15px;
+    }
+    
+    .product-image {
+        border-radius: 6px;
+    }
+    
+    .product-info-section {
+        padding: 20px 15px;
+    }
+    
+    .product-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .product-description {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .size-selection h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .size-options {
+        gap: 4px;
+        margin-bottom: 15px;
+    }
+    
+    .size-label {
+        padding: 4px 8px;
+        font-size: 12px;
+        min-width: 28px;
+    }
+    
+    .price {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .buy-button {
+        padding: 12px 24px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    .buy-button i {
+        font-size: 12px;
+    }
+    
+    /* Старые стили для совместимости */
+    .info-container {
+        padding: 15px;
+        margin: 70px 10px 15px;
+    }
+    
+    .user-image {
+        max-width: 80px;
+        max-height: 80px;
+        margin-right: 15px;
+    }
+    
+    .text-info p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    
+    .buttons {
+        margin-top: 15px;
+    }
+    
+    .button-account-password,
+    .button-cancel,
+    .button-photo-account,
+    .button-account-resume {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+    
+    /* Футер для телефонов */
+    .footer-container {
+        padding: 0 10px 25px;
+        gap: 25px;
+    }
+    
+    .footer-section h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-item {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .social-links {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .working-hours {
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        font-size: 11px;
+        padding: 0 10px;
+        line-height: 1.4;
+    }
+    
+    /* Старые футер стили */
+    .container-footer {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    
+    .footer-content,
+    .footer-content-1 {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-content h3,
+    .footer-content-1 h3 {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    
+    .contact-info p {
+        margin: 10px;
+        font-size: 13px;
+    }
+    
+    .social-icons a {
+        margin-right: 8px;
+    }
+    
+    .fa-facebook a,
+    .fa-twitter a,
+    .fa-instagram a,
+    .fa-youtube a,
+    .fa-telegram a {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        margin-right: 8px;
+    }
+}
+

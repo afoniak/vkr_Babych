@@ -1,0 +1,235 @@
+/* Category List Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles - импортируем из основного файла */
+@import url('./style.css');
+
+/* Main content для страниц категорий */
+.category-main {
+    margin-top: 80px;
+    padding: 60px 0;
+    background: #ffffff;
+    min-height: calc(100vh - 160px);
+}
+
+.category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовок сторінки */
+.category-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.category-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Секції категорій */
+.category-section {
+    margin-bottom: 70px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #495057;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #dee2e6;
+    border-radius: 1px;
+}
+
+/* Сітка підкатегорій */
+.subcategory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Кнопки підкатегорій - ультра мінімалістичний дизайн */
+.subcategory-card {
+    position: relative;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #e9ecef;
+}
+
+/* Hover эффекты - розовые для женских, голубые для мужских */
+.subcategory-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Жіночі категорії - рожевий при наведенні */
+body[data-category="women"] .subcategory-card:hover {
+    background: #ffc1cc;
+}
+
+/* Чоловічі категорії - блакитний при наведенні */
+body[data-category="men"] .subcategory-card:hover {
+    background: #b3d9ff;
+}
+
+.subcategory-card:active {
+    transform: translateY(-2px);
+}
+
+/* Контент кнопки */
+.subcategory-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.subcategory-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    color: #495057;
+}
+
+.subcategory-card:hover .subcategory-content {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.category-placeholder span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Анімації */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.subcategory-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.subcategory-card:nth-child(1) { animation-delay: 0.1s; }
+.subcategory-card:nth-child(2) { animation-delay: 0.2s; }
+.subcategory-card:nth-child(3) { animation-delay: 0.3s; }
+.subcategory-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-main {
+        margin-top: 60px;
+        padding: 40px 0;
+    }
+    
+    .category-title {
+        font-size: 2.2rem;
+    }
+    
+    .category-subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .subcategory-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .subcategory-card {
+        height: 180px;
+    }
+    
+    .subcategory-content {
+        padding: 20px;
+    }
+    
+    .subcategory-name {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .subcategory-card {
+        height: 160px;
+    }
+    
+    .subcategory-name {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+}
